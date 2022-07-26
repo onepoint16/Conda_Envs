@@ -1,0 +1,56 @@
+save env to dir
+
+conda config --add envs_dirs /home/jovyan/.conda_envs
+
+remove env from dir
+
+conda config --remove envs_dirs /home/jovyan/.conda_envs
+
+install kernel
+
+conda install -c anaconda ipykernel
+
+save kernel to main dir
+
+python -m ipykernel install --user --name=<condaEnvName>
+
+List Kernels
+
+jupyter kernelspec list
+
+Remove Kernels
+
+jupyter kernelspec remove <kernel-name>
+
+Export env
+
+conda env export > environment.yml
+
+Create form env
+
+conda env create -f environment.yml
+
+Deoldify env commands
+
+conda create - n deoldify python=3.7.3
+source activate deoldify
+conda config --add envs_dirs /home/jovyan/.conda_envs
+conda install -c anaconda ipykernel
+python -m ipykernel install --user --name=Deoldify
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+pip install fastai==1.0.60
+pip install torchvision torchaudio tensorboardX youtube-dl pillow==9.0.0
+pip install ffmpeg-python
+pip install opencv-python
+pip install wandb
+
+
+GIT Commands
+
+echo "# <Repo Name>" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:<User and Repo Details>
+git push -u origin main
